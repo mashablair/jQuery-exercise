@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Event Parameter I</title>
+
+    <style>
+        .price {
+            display: none;
+        }
+
+        .tour {
+            -moz-transition: top 0.2s;
+            -o-transition: top 0.2s;
+            -webkit-transition: top 0.2s;
+            transition: top 0.2s;
+        }
+
+        .highlighted {
+            background-color: grey;
+            color: red;
+            border-color': 100px solid black;
+            font-weight: bold;
+            top: -10px;
+        }
+
+        .highlighted .price {
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
 
 
-<div id="all-tours" class="links">
+<div id="vacations" class="links">
   <h1>Guided Tours</h1>
   <ul>
     <li class="tour usa" data-discount="199">
@@ -16,6 +42,7 @@
       <button class="book">Book Now</button>
       <a href="#" class="see-photos">See Photos</a>
       <ul class="photos">
+        <li class="price">$100</li>
         <li>
           <img src="https://placeimg.com/150/150/animals">
           <span>Arc de Triomphe</span>
@@ -36,6 +63,7 @@
       <button class="book">Book Now</button>
       <a href="#" class="see-photos">See Photos</a>
       <ul class="photos">
+        <li class="price">$100</li>
         <li>
           <img src="https://placeimg.com/150/150/animals">
           <span>Arc de Triomphe</span>
@@ -56,6 +84,7 @@
       <button class="book">Book Now</button>
       <a href="#" class="see-photos">See Photos</a>
       <ul class="photos">
+        <li class="price">$100</li>
         <li>
           <img src="https://placeimg.com/150/150/animals">
           <span>Arc de Triomphe</span>
