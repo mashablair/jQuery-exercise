@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercises</title>
+    <script src='application.js'></script>
+
+</head>
+<body>
+
+<h1>jQuery</h1>
+
+<p>This is my jQuery exercises!</p>
+
+<button id="button" href="#">Show/Hide</button>
+<div id="item">Make Me Disappear!</div>
+
+<h1>Where do you want to go?</h1>
+<h2>Travel Destinations</h2>
+<p>Plan your next adventure</p>
+<ul id="destinations">
+    <li>Rome</li>
+    <li id="brazil">Rio</li>
+    <li class="promo">Paris</li>
+</ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- If I downloaded jQuery: -->
+<!-- <script src='jquery.min.js'></script> -->
+<!-- If I want to use external jQuery file: -->
+<!-- <script src='application.js'></script> -->
+
+<script>
+
+$('p').text();
+// --> This is my jQuery...
+
+$('p').text('Why study this?');
+// --> it will change the text
+
+// To start our code:
+// $(document).ready(function() {
+//     // some code;
+// });
+
+
+
+// from Quora:
+// $(document).ready(function () {
+//     $(“button”).click(function () {
+//         $(“p”).toggle(600);
+//     });
+// });
+
+
+
+
+// http://stackoverflow.com/questions/19074171/how-to-toggle-a-divs-visibility-by-using-a-button-click
+$(function() {
+    $('#button').click(function(){
+        $('#item').toggle();
+    });
+});
+
+
+
+// Descendant selector: it selects ALL children
+$('#destinations li');  // li is a child of #destinations
+
+// Selecting only direct children:
+$('#destinations > li');
+
+// More exact:
+$('.promo, #brazil');
+
+// Select the 1st li of ul:
+$('#destinations li:first');
+
+// or last:
+$('#destinations li:last');
+
+// or odd:
+$('#destinations li:odd');   // don't forget, the list starts with 0
+
+
+
+</script>
+
+</body>
+</html>
