@@ -16,9 +16,13 @@
 $(document).ready(function() {
   $('#nights').on('keyup', function() {
     var nights = +$(this).val();
+    var dailyPrice = +$(this).closest(".tour").data("daily-price");
+    $('#total').text(nights * dailyPrice);
     $('#nights-count').text(nights);
-    var pricePerNight = +$(this).closest('.tour').data('daily-price');
-    $('#total').text(nights * pricePerNight);
+  });
+  // add another event handler
+  $('#nights').on('focus', function() {
+    $(this).val('7');
   });
 });
 
